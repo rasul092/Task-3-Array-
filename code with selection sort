@@ -1,0 +1,25 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+void print(){ // masisivdeki ededlerin azalma sirasi(selection sort)
+    int array[]={78,43,21,32,108,63,72};
+    int n= sizeof(array)/sizeof(array[0]);
+    for(int i=0;i<n-1;i++){
+        for(int j=i+1;j<n;j++){
+            if(array[i]<array[j]){
+                int temp= array[i];
+                array[i]=array[j];
+                array[j]=temp;
+            }
+        }
+    }
+    cout<<"massivdeki ededlerin azalma sirasi ile : ";
+    for(int i=0;i<n;i++){
+        cout<<array[i]<<" ";
+    }
+}
+int main() {
+    print();
+    return 0;
+}
