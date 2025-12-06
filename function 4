@@ -1,0 +1,30 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+void print (){  //10 elementdən ibarət A massivi verilmişdir. İstifadəçidən b və c ədədlərini alın. b<a[i]<c şərtini ödəyən  elementlərin cəmini tapan funksiya
+    int a[]={3,2,4,5,6,7,2,14,5,4};
+    int b;
+    int c;
+    int sum=0;
+    int n=sizeof(a)/sizeof(a[0]);
+    cout<<"b ededini daxil edin : ";
+    cin>>b;
+    cout<<"c ededini daxil edin : ";
+    cin>>c;
+    
+    for( int i=0;i<n;i++){
+        if(b<a[i] && a[i]<c){
+            sum+=a[i];
+        }
+    }
+    cout<<"serti odeyen elementin cemi : "<<sum<<endl;
+}
+int main(){
+    print();
+    return 0;
+    
+}
+    
+    
+    
