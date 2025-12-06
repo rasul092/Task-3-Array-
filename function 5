@@ -1,0 +1,24 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>  
+using namespace std;
+
+void print (){ // X və Y massivləri verilmişdir. Elə x[i] elementini tapınki x[i]=y[i]^2  şərti ödənsin.
+    int x[]={1,2,4,10,8,0,19}; // bunun sualini tam basa dusmedimki ne isteyir sertde
+    int y[]={2,5,8,5,1,4,2};
+    int n=sizeof(x)/sizeof(x[0]);
+    int k=sizeof(y)/sizeof(y[0]);
+    int size =(n>k) ? k :n;
+    cout<<"serti odeyen elementler : ";
+    for (int i=0; i<size;i++){
+        if(x[i]==y[i]*2){
+            cout<<x[i]<<" "<<endl;
+        }
+    }
+}
+int main(){
+    print();
+    return 0;
+}
+    
+    
+
