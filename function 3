@@ -1,0 +1,38 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std; //A və B massivləri verilmişdir. Bu massivlərdə maksimum ədədləri tapıb yerini dəyisen kod
+
+void print(){
+int array1[]={3,2,4,6,7,9,5};
+int array2[]={2,1,6,0,2,4,3};
+int n=sizeof(array1)/sizeof(array1[0]);
+int k=sizeof(array2)/sizeof(array2[0]);
+
+int max1=0;
+int max2=0;
+for (int i=0;i<n;i++){
+    if(array1[i]>max1){
+        max1=i;
+    }
+}
+for (int i=0;i<k;i++){
+    if(array2[i]>max2){
+        max2=i;
+    }
+}
+int temp=array1[max1];
+array1[max1]=array2[max2];
+array2[max2]=temp;
+cout<<"array1 massivi : ";
+for( int i=0;i<n;i++){
+    cout<<array1[i]<<" "<<endl;
+}
+cout<<"Array2 massivi : ";
+for(int i=0;i<k;i++){
+    cout<<array2[i]<<" "<<endl;
+}
+}
+int main(){
+    print();
+    return 0;
+}
