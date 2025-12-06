@@ -1,0 +1,37 @@
+#include <iostream>
+#include <cmath>
+using namespace std; //25 elementli massivdə maksimum və minimum elementləri tapıb, ədədi və həndəsi ortasını hesablayan funksiya 
+
+void print() {
+    int massiv[25] = {3, 7, 2, 9, 5, 12, 6, 8, 15, 1,
+                      4, 11, 13, 10, 14, 18, 20, 19, 17, 16,
+                      21, 23, 22, 25, 24}; 
+
+    int uzunluq = sizeof(massiv) / sizeof(massiv[0]);
+
+    int maksimumIndeks = 0;
+    int minimumIndeks = 0;
+    for(int i = 1; i < uzunluq; i++) {
+        if(massiv[i] > massiv[maksimumIndeks]) {
+            maksimumIndeks = i;
+        }
+        if(massiv[i] < massiv[minimumIndeks]) {
+            minimumIndeks = i;
+        }
+    }
+
+    int maksimumQiymet = massiv[maksimumIndeks];
+    int minimumQiymet = massiv[minimumIndeks];
+    double edediOrta = (maksimumQiymet + minimumQiymet) / 2.0;
+
+    double hendeOrta = sqrt(maksimumQiymet * minimumQiymet);
+    cout << "Maksimum element: " << maksimumQiymet << endl;
+    cout << "Minimum element: " << minimumQiymet << endl;
+    cout << "Ədədi orta: " << edediOrta << endl;
+    cout << "Həndəsi orta: " << hendeOrta << endl;
+}
+
+int main() {
+    print();
+    return 0;
+}
