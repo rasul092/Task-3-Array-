@@ -1,0 +1,29 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+void print() { // Qarışıq ədədlərdən ibarət massiv verilmişdir. Bu massivdə müsbət ədədlərin içində ən kiçik olan ədədi tapan funksiya yaradın.
+    int array[]={-1,-2,-5,-9,3,5,8,2};
+    int minPositive=-1;
+    int n=sizeof(array)/sizeof(array[0]);
+    
+    for (int i=0;i<n;i++) {
+        if(array[i]>0){
+         if(minPositive==-1 || array[i]<minPositive){
+                minPositive=array[i];
+            }
+        }
+    }
+
+    if(minPositive == -1){
+    cout<<"musbet eded yoxdur.";
+    }
+    else{ 
+    cout<<"massivdeki en kicik musbet eded : "<<minPositive<<endl;
+    }
+}
+    
+    int main(){
+        print();
+        return 0;
+    }
